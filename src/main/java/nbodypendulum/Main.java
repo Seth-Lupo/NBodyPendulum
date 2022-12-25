@@ -26,13 +26,13 @@ public class Main extends PApplet  {
     	
     	frameRate((float) 50);
     	
-    	systems = new ClosedSystem[5];
+    	systems = new ClosedSystem[8];
     	for (int i = 0; i < systems.length; i++) {
     		
     		systems[i] = new ClosedSystem();
     		
-    		for (int j = 0; j < 7; j++) {
-    			systems[i].pList.add(new Pendulum((float) (PI * 2/5 + j/2 + 0.0000001*i), (float) (100 * Math.pow(0.9, j)), (float) (10 * Math.pow(0.9, j))));
+    		for (int j = 0; j < 4; j++) {
+    			systems[i].pList.add(new Pendulum((float) (PI * 2/5 + j/2 + 0.0000001*i), (float) (150 * Math.pow(0.9, j)), (float) (10 * Math.pow(0.9, j))));
     		}
     		
     	}
